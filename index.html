@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App UI Web</title>
+  <link rel="stylesheet" href="./index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+</head>
+<body>
+  <div class="main" id="main">
+    <div class="top">
+      <div class="heading-a">
+        <h1>Tasks</h1><span>Lists</span>
+      </div>
+      <div class="addlist-link">
+        <a href="#" onclick="addlistPage();" >
+          <i class="fas fa-plus-circle"></i>
+          <p>Add List</p>
+        </a>  
+      </div>
+    </div>
+    <div class="no-items" id="noItems">
+      <p >No items in todo list</p>
+    </div>
+    <div class="cards" id="cards">
+    </div>
+  </div>
+  <div class="addlist-page" id="addlist-page">
+    <div>
+      <label for="new-list">Add New List</label><br>
+      <input type="text" name="new-list" id="new-list"><br>
+      <a><input type="submit" value="Add" id="listButton"></a>
+      <a><input type="submit" value="Close" id="closeButton1"></a>
+    </div>
+  </div>
+  
+  <div class="additem-page" id="additem-page">
+    <div >
+      <label for="new-item">Add New Todo</label><br>
+      <input type="text" name="new-item" id="new-item"><br>
+      <a href="#"><input type="submit" value="ADD" id="itemButton"></a>
+      <a><input type="submit" value="Close" id="closeButton2"></a>
+    </div>
+  </div>
+
+  <div class="list-info" id="list-info">
+    <div class="flex">
+      <div class="go-back" id="go-back">
+        <a href="#">
+          <i class="fa-solid fa-circle-arrow-left"></i>
+          <p>Back</p>
+        </a>
+      </div>
+      <div class="list-heading">
+        <h1> 
+        </h1>
+      </div>
+      <div class="addlist-link">
+        <a href="#" onclick="addlistPage();" >
+          <i class="fas fa-plus-circle"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>

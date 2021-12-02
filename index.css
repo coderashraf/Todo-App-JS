@@ -1,0 +1,578 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+.main {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 30px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+.no-items {
+  margin-left: 2rem;
+  font-size: 2.5rem;
+  color: grey;
+  margin-top: 1rem;
+}
+.heading-a {
+  display: inline-block;
+}
+.heading-a h1 {
+  display: inline;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4rem;
+  margin-right: 0.2rem;
+}
+.heading-a span {
+  font-size: 64px;
+  font-family: "Heebo", sans-serif;
+  color: slategray;
+}
+.addlist-link {
+  display: inline-block;
+}
+
+.addlist-link a {
+  text-decoration: none;
+  color: rgb(227, 85, 34);
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+}
+.addlist-link i {
+  margin-right: 10px;
+}
+
+.addlist-link p {
+  font-family: "Heebo", sans-serif;
+  font-size: 31px;
+  color: slategrey;
+  font-weight: 600;
+}
+
+.cards {
+  margin-top: 30px;
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 50px 67px;
+  margin-bottom: 30px;
+}
+.card {
+  border: 2px solid rgb(227, 147, 147);
+  height: 358px;
+  width: 230px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 10px 10px 10px rgb(221, 216, 216);
+}
+.card .list-title {
+  font-family: "Heebo", sans-serif;
+  text-decoration: none;
+  font-size: 26px;
+  margin: 30px 0 10px 0;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+.list-title a {
+  text-decoration: none;
+  color: rgb(224, 137, 137);
+}
+.card hr {
+  margin-left: 17%;
+  background: rgb(158, 171, 185);
+}
+
+.item {
+  gap: 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  justify-content: center;
+  margin-top: 5px;
+}
+.item p {
+}
+.item-status {
+  background: rgb(241, 81, 81);
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  font-size: 10px;
+  color: white;
+  cursor: pointer;
+}
+.card .completed {
+  color: red;
+}
+
+.itemBtns {
+  position: absolute;
+  display: flex;
+  bottom: 1rem;
+  right: 20px;
+  gap: 10px;
+}
+.itemBtns div {
+  cursor: pointer;
+  font-size: 25px;
+}
+.itemBtns div i {
+  pointer-events: none;
+  color: rgb(241, 81, 81);
+}
+.fa-trash-can,
+.fa-plus-circle {
+  pointer-events: none;
+}
+/* CSS FOR THE ADD NEW LIST PAGE */
+
+.filtered {
+  filter: blur(7px);
+}
+.filtered div {
+  box-shadow: none;
+}
+
+.addlist-page {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 3%;
+  height: 100%;
+  width: 94%;
+  padding: 0px 40px;
+  border-left: 1px solid slategray;
+  border-right: 1px solid slategray;
+}
+
+.addlist-page div {
+  font-family: "Heebo", sans-serif;
+  font-weight: bolder;
+  margin: auto;
+  background-color: white;
+  color: rgb(241, 81, 81);
+  border: 2px solid rgb(227, 147, 147);
+  border-radius: 10px;
+  height: 220px;
+  width: 450px;
+  text-align: center;
+  font-size: 24px;
+  padding-top: 25px;
+  box-shadow: 10px 10px 10px rgb(221, 216, 216);
+}
+
+.addlist-page input[type="text"] {
+  height: 43px;
+  width: 320px;
+  margin-top: 15px;
+  border: 2px solid rgb(227, 147, 147);
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgb(195, 187, 187);
+}
+
+.addlist-page input[type="submit"] {
+  margin-top: 25px;
+  height: 43px;
+  width: 104px;
+  border-radius: 50px;
+  font-size: 25px;
+  color: white;
+  background: rgb(241, 96, 96);
+  border: none;
+  cursor: pointer;
+}
+
+/* List Info Page CSS starts here */
+
+.list-info {
+  font-family: sans-serif;
+  height: 730px;
+  display: none;
+  margin-top: 15px;
+}
+
+.list-info > .flex {
+  justify-content: space-around;
+}
+.list-heading {
+  font-size: 31px;
+  text-align: center;
+  display: inline-block;
+}
+
+.go-back {
+  display: inline-block;
+}
+.go-back i {
+  position: relative;
+  top: 4px;
+  font-size: 40px;
+  color: rgb(227, 85, 34);
+}
+.go-back p {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 32px;
+  color: grey;
+}
+.list-info .card {
+  height: 435px;
+  width: 445px;
+  border: 2px solid rgb(227, 147, 147);
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px rgb(221, 216, 216);
+  margin: 70px auto;
+  text-align: left;
+  position: relative;
+}
+
+#list-info .card .list-title {
+  font-family: "Heebo", sans-serif;
+  text-decoration: none;
+  font-size: 36px;
+  margin: 30px 0 15px 0;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(229, 16, 16);
+}
+#list-info .card p {
+  font-size: 20px;
+}
+#list-info .item {
+  margin-top: 10px;
+}
+#list-info .itemBtns {
+  gap: 20px;
+  right: 40px;
+}
+.itemBtns i {
+  font-size: 30px;
+}
+
+.list-title a {
+  pointer-events: none;
+}
+.list-title hr {
+  margin-left: 30%;
+  background: black;
+  position: relative;
+  left: 2px;
+}
+
+/* CSS for Addlist page(index4) */
+
+.additem-page {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 3%;
+  height: 100%;
+  width: 94%;
+  padding: 0px 40px;
+  border-left: 1px solid slategray;
+  border-right: 1px solid slategray;
+}
+
+.additem-page div {
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+  margin: auto;
+  background-color: white;
+  color: rgb(241, 81, 81);
+  border: 2px solid rgb(227, 147, 147);
+  border-radius: 10px;
+  height: 220px;
+  width: 450px;
+  text-align: center;
+  font-size: 24px;
+  padding-top: 25px;
+  box-shadow: 10px 10px 10px rgb(221, 216, 216);
+}
+
+.additem-page input[type="text"] {
+  height: 43px;
+  width: 320px;
+  margin-top: 15px;
+  border: 2px solid rgb(227, 147, 147);
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgb(195, 187, 187);
+}
+
+.additem-page input[type="submit"] {
+  margin-top: 25px;
+  height: 43px;
+  width: 104px;
+  border-radius: 50px;
+  font-size: 25px;
+  color: white;
+  background: rgb(241, 96, 96);
+  border: none;
+  cursor: pointer;
+}
+
+/* for MotoG4 */
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .main {
+    margin-top: unset;
+    margin: 1rem;
+
+    /* background: green; */
+  }
+  .top {
+    position: unset;
+    margin: 0;
+    margin-top: 2.7rem;
+  }
+  .heading-a {
+    display: inline-block;
+  }
+  .heading-a h1 {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    margin-right: 0.5rem;
+  }
+  .heading-a span {
+    font-size: 3rem;
+    font-family: "Heebo", sans-serif;
+    color: rgba(0, 0, 0, 0.625);
+  }
+  .addlist-link {
+    display: inline-block;
+    margin-left: 2.5rem;
+  }
+  .addlist-link a {
+    font-size: 35px;
+  }
+  .addlist-link p {
+    display: none;
+  }
+  .cards {
+    gap: 25px 67px;
+  }
+  .card {
+    height: fit-content;
+    width: 92.5%;
+    border: 1px solid rgb(243, 175, 175);
+    box-shadow: 4px 5px 5px rgb(221, 216, 216);
+    margin-bottom: 0.2rem;
+  }
+  .card hr {
+    display: none;
+  }
+  .card .completed {
+    display: none;
+  }
+  .card .pending {
+    display: none;
+  }
+  .card .list-title {
+    font-size: 20px;
+    margin: 0;
+    padding: 1.4rem 0 0.9rem 1rem;
+    text-align: left;
+  }
+  .card .list-title a {
+    color: rgba(0, 0, 0, 0.618);
+  }
+
+  .filtered {
+    filter: blur(7px);
+  }
+  .filtered div {
+    box-shadow: none;
+  }
+
+  .addlist-page {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .addlist-page div {
+    position: relative;
+    top: 16rem;
+    left: 0;
+    margin: 0 auto;
+    height: 11.5rem;
+    width: 20rem;
+    padding: 1.5rem 3.3rem;
+    color: rgb(241, 81, 81);
+    border: 2px solid rgb(227, 147, 147);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(221, 216, 216);
+  }
+
+  .addlist-page label {
+    font-size: 20px;
+  }
+  .addlist-page input[type="text"] {
+    height: 2rem;
+    width: 13rem;
+    margin-top: 15px;
+    border: 1px solid rgb(214, 51, 51);
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgb(195, 187, 187);
+  }
+
+  .addlist-page input[type="submit"] {
+    margin-top: 0.7rem;
+    height: 40px;
+    width: 93px;
+    border-radius: 50px;
+    font-size: 17px;
+    color: white;
+    background: rgba(233, 61, 61, 0.951);
+    border: none;
+    cursor: pointer;
+  }
+  /* Index3 css(Card Info) */
+
+  .first-hr {
+    display: none;
+  }
+  .second-hr {
+    display: none;
+  }
+  .go-back p {
+    display: none;
+  }
+  .list-info {
+    padding: 1rem;
+    position: relative;
+  }
+  .go-back {
+    margin: 0;
+    position: absolute;
+    top: 57px;
+    left: 20px;
+  }
+  .list-heading h1 {
+    font-size: 36px;
+  }
+  .go-back i {
+    font-size: 34px;
+  }
+  .list-info {
+    height: unset;
+  }
+  .list-info-card {
+    height: 395px;
+    width: 260px;
+    border: 2px solid rgb(227, 147, 147);
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgb(221 216 216);
+    margin: 65px auto 0px auto;
+    text-align: left;
+    position: relative;
+  }
+  .list-info-card a i {
+    bottom: 15px;
+    right: 15px;
+    font-size: 35px;
+  }
+  .list-info-card .list-title {
+    font-size: 25px;
+    margin: 35px 0 10px 0;
+  }
+  .list-title-hr {
+    margin-left: 25%;
+  }
+  .list-info-card .completed {
+    margin: 40px 0px 10px 25px;
+    font-size: 20px;
+    color: rgba(205, 13, 13, 0.715);
+  }
+  .list-info-card .completed hr {
+    position: absolute;
+    top: 10px;
+    right: 3rem;
+    height: 3px;
+    width: 9.3rem;
+    background-color: red;
+    border: none;
+  }
+  .list-info-card input {
+    height: 19px;
+    width: 19px;
+    position: relative;
+    top: 2px;
+  }
+  .list-info-card label {
+    font-size: 1.3rem;
+  }
+  /* Page4 CSS(add new todo) */
+  .additem-page {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .additem-page div {
+    position: relative;
+    top: 16rem;
+    left: 0;
+    height: 11.5rem;
+    width: 20rem;
+    padding: 1.5rem 3.3rem;
+    color: rgb(241, 81, 81);
+    border: 2px solid rgb(227, 147, 147);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(221, 216, 216);
+    margin: 0 auto;
+  }
+
+  .additem-page label {
+    font-size: 20px;
+  }
+  .additem-page input[type="text"] {
+    height: 2rem;
+    width: 13rem;
+    margin-top: 15px;
+    border: 1px solid rgb(214, 51, 51);
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgb(195, 187, 187);
+  }
+
+  .additem-page input[type="submit"] {
+    margin-top: 0.7rem;
+    height: 40px;
+    width: 93px;
+    border-radius: 50px;
+    font-size: 17px;
+    color: white;
+    background: rgba(233, 61, 61, 0.951);
+    border: none;
+    cursor: pointer;
+  }
+}
+
+/* Ipad */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main {
+    margin-top: 20px;
+  }
+  .top {
+    margin: 50px 50px;
+  }
+  .first-hr {
+    display: none;
+  }
+  .second-hr {
+    display: none;
+  }
+}
